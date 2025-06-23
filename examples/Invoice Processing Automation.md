@@ -49,10 +49,10 @@ Number: 123456
 ```
 
 **True:**
-- **Action:** AI - Process Invoice
+**Action:** AI - Process Invoice
 - **Parameters:** `outputs('Get_Attachment')?['body/contentBytes']`
 
-- **Action:** Create Item (SharePoint Action)
+**Action:** Create Item (SharePoint Action)
 - **Site Address:** URL of Site Collection
 - **List Name:** Name of List
 - **Title:** `outputs('Get_Attachment')?['body/name']`
@@ -60,7 +60,7 @@ Number: 123456
 - **InvoiceTotal:** `json(outputs('AI_-_Process_Invoice')?['body/result'])['InvoiceTotal']`
 - **InvoiceID:** `json(outputs('AI_-_Process_Invoice')?['body/result'])['InvoiceId']`
 
-- **Action:** Create file (SharePoint Action)
+**Action:** Create file (SharePoint Action)
 - **Site Address:** URL of Site Collection  
 - **Folder Path:** `/Shared Documents`
 - **File Name:** `outputs('Get_Attachment')?['body/name']`
